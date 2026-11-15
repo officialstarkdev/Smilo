@@ -1,0 +1,106 @@
+/*
+ * Smilo design tokens. The single source for colour, type, spacing, shape
+ * and motion. Components reference these variables only.
+ */
+:root {
+  /* ---- Colour: surfaces ---- */
+  --paper: #f6f1e9; /* page background, warm off-white */
+  --paper-deep: #ede5d8; /* alternate section band */
+  --surface: #fffcf7; /* cards, inputs */
+  --line: #ddd2c1;
+  --line-strong: #c4b6a1;
+
+  /* ---- Colour: ink ---- */
+  --ink: #1b2725; /* headings + body, 14:1 on paper */
+  --ink-soft: #46544f; /* secondary text, 7.4:1 */
+  --ink-faint: #5e6b67; /* captions/meta, 5.1:1, still AA for small text */
+
+  /* ---- Colour: primary (deep teal) ---- */
+  --teal-900: #0d302d;
+  --teal-800: #15403c;
+  --teal-700: #1f5a54; /* primary actions */
+  --teal-600: #2a6c65;
+  --teal-300: #a8c6bf;
+  --teal-200: #c6dbd5;
+  --teal-100: #dde9e4;
+  --teal-50: #ebf2ef;
+
+  /* ---- Colour: accent (soft coral) ---- */
+  --coral-700: #a24a31; /* accent text on paper, 5.3:1 */
+  --coral-400: #e58b6d; /* decorative only */
+  --coral-200: #f2c6b5;
+  --coral-100: #f8e2d8;
+  --sand-300: #d9c7a6;
+
+  /* ---- Colour: feedback ---- */
+  --danger: #9e3626;
+  --danger-bg: #f7e1db;
+  --success: #2b6449;
+  --success-bg: #dcece2;
+  --notice-bg: #f5ead2;
+
+  --focus-ring: 0 0 0 3px var(--paper), 0 0 0 5px var(--teal-700);
+
+  /* ---- Type ---- */
+  --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-body: 'Figtree', 'Segoe UI', system-ui, -apple-system, sans-serif;
+
+  /* Fluid type scale (mobile → desktop) */
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1.0625rem;
+  --text-lg: clamp(1.125rem, 1.05rem + 0.35vw, 1.3rem);
+  --text-xl: clamp(1.35rem, 1.2rem + 0.7vw, 1.75rem);
+  --text-2xl: clamp(1.7rem, 1.4rem + 1.4vw, 2.5rem);
+  --text-3xl: clamp(2.2rem, 1.6rem + 2.8vw, 3.9rem);
+  --text-4xl: clamp(2.6rem, 1.7rem + 4.2vw, 5.2rem);
+
+  --leading-tight: 1.08;
+  --leading-snug: 1.3;
+  --leading-body: 1.6;
+
+  /* ---- Space (4px base) ---- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --space-10: 8rem;
+  --section-y: clamp(4rem, 3rem + 5vw, 8rem);
+
+  /* ---- Layout ---- */
+  --container: 1180px;
+  --container-narrow: 760px;
+  --gutter: clamp(1rem, 0.6rem + 2.4vw, 2.5rem);
+  --header-h: 72px;
+
+  /* ---- Shape ---- */
+  --radius-xs: 6px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 28px;
+  --radius-pill: 999px;
+  --radius-arch: 999px 999px var(--radius-lg) var(--radius-lg);
+
+  --shadow-sm: 0 1px 2px rgba(27, 39, 37, 0.06);
+  --shadow-md: 0 1px 2px rgba(27, 39, 37, 0.05), 0 8px 24px -8px rgba(27, 39, 37, 0.12);
+  --shadow-lg: 0 2px 4px rgba(27, 39, 37, 0.04), 0 24px 48px -16px rgba(27, 39, 37, 0.18);
+
+  /* ---- Motion ---- */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --dur-fast: 140ms;
+  --dur: 240ms;
+  --dur-slow: 420ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur: 0ms;
+    --dur-slow: 0ms;
+  }
+}
